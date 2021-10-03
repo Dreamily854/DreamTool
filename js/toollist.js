@@ -32,14 +32,14 @@ function toollist_add() {
         url: './toollist.json',
         data: {},
         success: function (data) {
-            console.log(data)
+            //console.log(data)
             var grouplist = data.groups
             for (var key in grouplist) {
                 var group = grouplist[key]
                 var GroupName = group.name
                 AddGroupName(GroupName)
                 itemlist = group.items
-                console.log(grouplist[key]);
+                //console.log(grouplist[key]);
                 Additem(itemlist)
 
             }

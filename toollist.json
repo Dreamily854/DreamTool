@@ -1,7 +1,7 @@
 {
     "groups": [
         {
-            "name": "编码/解码",
+            "name": "CryptoJS编码/解码",
             "items": [
                 {
                     "name": "base64编解码工具",
@@ -13,48 +13,53 @@
                 },
                 {
                     "name": "hex编解码工具",
-                    "url": "./tool/en_decode/base64.html"
-                },
-                {
-                    "name": "md5编解码工具",
-                    "url": "./tool/en_decode/md5.html"
+                    "url": "./tool/en_decode/hex.html"
                 },
                 {
                     "name": "utf16编解码工具",
-                    "url": "./tool/en_decode/base64.html"
+                    "url": "./tool/en_decode/utf16.html"
                 },
                 {
                     "name": "latin1编解码工具",
-                    "url": "./tool/en_decode/base64.html"
+                    "url": "./tool/en_decode/latin1.html"
                 }
             ]
         },
         {
-            "name": "加密/解密",
+            "name": "CryptoJS加密/解密",
             "items": [
                 {
                     "name": "AES加解密工具",
-                    "url": "./tool/en_decrypt/base64.html"
+                    "url": "./tool/en_decrypt/aes.html"
                 },
                 {
                     "name": "Tripledes加解密工具",
-                    "url": "./tool/en_decrypt/base64.html"
+                    "url": "./tool/en_decrypt/tripledes.html"
                 },
                 {
                     "name": "rc4加解密工具",
-                    "url": "./tool/en_decrypt/base64.html"
+                    "url": "./tool/en_decrypt/rc4.html"
                 },
                 {
                     "name": "rabbit加解密工具",
-                    "url": "./tool/en_decrypt/base64.html"
+                    "url": "./tool/en_decrypt/rabbit.html"
                 },
                 {
                     "name": "rabbit-legacy加解密工具",
-                    "url": "./tool/en_decrypt/base64.html"
+                    "url": "./tool/en_decrypt/rabbit-legacy.html"
                 },
                 {
                     "name": "evpkdf加解密工具",
-                    "url": "./tool/en_decrypt/base64.html"
+                    "url": "./tool/en_decrypt/evpkdf.html"
+                }
+            ]
+        },
+        {
+            "name": "CryptoJS哈希算法",
+            "items": [
+                {
+                    "name": "md5编码工具",
+                    "url": "./tool/hash/md5.html"
                 }
             ]
         }

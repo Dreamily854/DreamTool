@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+        content="width=device-width,initial-scale=1, maximum-scale=1, minimum-scale=0.5, user-scalable=no">
+    <title>DreamTool</title>
+    <link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/mdui/1.0.2/css/mdui.min.css">
+    <link rel="import" href="../footer.html" id="footer" />
+</head>
+
+<body class="mdui-theme-layout-dark mdui-theme-primary-blue mdui-theme-accent-blue">
+    <div class="mdui-toolbar">
+
+        <span class="mdui-typo-title">Dream WEB Tool</span>
+        <div class="mdui-toolbar-spacer">tripledes加解密工具</div>
+    </div>
+    <div class="mdui-container">
+        <div class="mdui-card mdui-m-t-1 mdui-p-t-1">
+            <!-- 卡片的标题和副标题 -->
+            <div class="mdui-card-primary">
+                <div class="mdui-card-primary-title">输入区</div>
+                <div class="mdui-card-primary-subtitle">input area</div>
+            </div>
+
+            <!-- 卡片的内容 -->
+            <div class="mdui-card-content">
+                <select class="mdui-select" id="tripledesEncodeMode" mdui-select="{position: 'bottom'}">
+                    <option value="0">编码</option>
+                    <option value="1">Hex</option>
+                    <option value="2">Base64</option>
+
+                </select>
+                <select class="mdui-select" id="tripledesMode" mdui-select="{position: 'bottom'}">
+                    <option value="0">模式</option>
+                    <option value="1">ECB</option>
+                    <option value="2">CBC</option>
+                    <option value="3">CTR</option>
+                    <option value="4">CFB</option>
+                    <option value="5">OFB</option>
+
+                </select>
+                <select class="mdui-select" id="tripledesPadding" mdui-select="{position: 'bottom'}">
+                    <option value="0">填充</option>
+                    <option value="1">iso10126</option>
+                    <option value="2">Pkcs7-Pkcs5</option>
+                    <option value="3">NoPadding</option>
+                    <option value="4">AnsiX923</option>
+                    <option value="5">ZeroPadding</option>
+                    <option value="6">ISO97971</option>
+
+                </select>
+                <!-- <select class="mdui-select" id="tripledesBit" disabled mdui-select="{position: 'bottom'}">
+                    <option value="0">位数</option>
+                    <option value="1">128</option>
+                    <option value="2">192</option>
+                    <option value="3">256</option>
+
+                </select>-->
+                <div class="mdui-textfield mdui-textfield-floating-label mdui-m-t-2">
+                    <label class="mdui-textfield-label">密钥(Key)</label>
+                    <input class="mdui-textfield-input" id="tripledesKey" type="text" />
+                </div>
+                <div class="mdui-textfield mdui-textfield-floating-label mdui-m-b-2 mdui-m-t-2">
+                    <label class="mdui-textfield-label">偏移量(iv)</label>
+                    <input class="mdui-textfield-input" id="tripledesIV" type="text" />
+                </div>
+                <div class="mdui-textfield mdui-m-b-2 mdui-m-t-2">
+                    <textarea class="mdui-textfield-input" id="tripledes_input" placeholder="需要编码或解码的内容"></textarea>
+                </div>
+            </div>
+
+            <!-- 卡片的按钮 -->
+            <div class="mdui-card-actions">
+                <button class="mdui-btn mdui-ripple" id="encryptButton" onclick="tripledes_encrypt()">加密</button>
+                <button class="mdui-btn mdui-ripple" id="decryptButton" onclick="tripledes_decrypt()">解密</button>
+            </div>
+
+        </div>
+
+        <div class="mdui-card mdui-m-t-1 mdui-p-t-1">
+            <!-- 卡片的标题和副标题 -->
+            <div class="mdui-card-primary">
+                <div class="mdui-card-primary-title">显示区</div>
+                <div class="mdui-card-primary-subtitle">output area</div>
+            </div>
+
+            <!-- 卡片的内容 -->
+            <div class="mdui-card-content">
+
+                <div class="mdui-textfield">
+                    <textarea class="mdui-textfield-input" id="tripledes_output" placeholder="计算后输出"></textarea>
+                </div>
+            </div>
+
+            <!-- 卡片的按钮 -->
+            <div class="mdui-card-actions">
+
+            </div>
+
+        </div>
+
+
+
+    </div>
+
+
+</body>
+
+<!-- MDUI -->
+<script src="https://cdnjs.loli.net/ajax/libs/mdui/1.0.2/js/mdui.min.js"></script>
+<!-- jQuery -->
+<script src="https://cdnjs.loli.net/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<!-- CryptoJS -->
+<script src="https://cdnjs.loli.net/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+<script src="../../js/tooljs/en_decrypt/tool-tripledes.js"></script>
+
+</html>

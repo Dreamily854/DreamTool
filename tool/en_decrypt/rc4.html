@@ -14,10 +14,9 @@
     <div class="mdui-toolbar">
 
         <span class="mdui-typo-title">Dream WEB Tool</span>
-        <div class="mdui-toolbar-spacer">base64编解码工具</div>
+        <div class="mdui-toolbar-spacer">rc4加解密工具</div>
     </div>
     <div class="mdui-container">
-
         <div class="mdui-card mdui-m-t-1 mdui-p-t-1">
             <!-- 卡片的标题和副标题 -->
             <div class="mdui-card-primary">
@@ -27,20 +26,33 @@
 
             <!-- 卡片的内容 -->
             <div class="mdui-card-content">
+                <select class="mdui-select" id="rc4EncodeMode" mdui-select="{position: 'bottom'}">
+                    <option value="0">编码</option>
+                    <option value="1">Hex</option>
+                    <option value="2">Base64</option>
 
-                <div class="mdui-textfield">
-                    <textarea class="mdui-textfield-input" id="base64_input" placeholder="需要编码或解码的内容"></textarea>
+                </select>
+                
+                <div class="mdui-textfield mdui-textfield-floating-label mdui-m-t-2">
+                    <label class="mdui-textfield-label">密钥(Key)</label>
+                    <input class="mdui-textfield-input" id="rc4Key" type="text" />
+                </div>
+                <div class="mdui-textfield mdui-textfield-floating-label mdui-m-b-2 mdui-m-t-2">
+                    <label class="mdui-textfield-label">偏移量(iv)</label>
+                    <input class="mdui-textfield-input" id="rc4IV" type="text" />
+                </div>
+                <div class="mdui-textfield mdui-m-b-2 mdui-m-t-2">
+                    <textarea class="mdui-textfield-input" id="rc4_input" placeholder="需要编码或解码的内容"></textarea>
                 </div>
             </div>
 
             <!-- 卡片的按钮 -->
             <div class="mdui-card-actions">
-                <button class="mdui-btn mdui-ripple" id="encodeButton" onclick="base64_encode()">编码</button>
-                <button class="mdui-btn mdui-ripple" id="decodeButton" onclick="base64_decode()">解码</button>
+                <button class="mdui-btn mdui-ripple" id="encryptButton" onclick="rc4_encrypt()">加密</button>
+                <button class="mdui-btn mdui-ripple" id="decryptButton" onclick="rc4_decrypt()">解密</button>
             </div>
 
         </div>
-
 
         <div class="mdui-card mdui-m-t-1 mdui-p-t-1">
             <!-- 卡片的标题和副标题 -->
@@ -53,7 +65,7 @@
             <div class="mdui-card-content">
 
                 <div class="mdui-textfield">
-                    <textarea class="mdui-textfield-input" id="base64_output" placeholder="计算后输出"></textarea>
+                    <textarea class="mdui-textfield-input" id="rc4_output" placeholder="计算后输出"></textarea>
                 </div>
             </div>
 
@@ -77,6 +89,6 @@
 <script src="https://cdnjs.loli.net/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <!-- CryptoJS -->
 <script src="https://cdnjs.loli.net/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
-<script src="../../js/tooljs/en_decode/tool-base64.js"></script>
+<script src="../../js/tooljs/en_decrypt/tool-rc4.js"></script>
 
 </html>
