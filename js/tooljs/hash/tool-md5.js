@@ -1,5 +1,5 @@
 // Dream WEB Tool Project
-// md5 encode&decode
+// md5 encode
 
 //  USE CryptoJS
 // https://cryptojs.gitbook.io/docs/

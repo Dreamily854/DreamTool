@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+        content="width=device-width,initial-scale=1, maximum-scale=1, minimum-scale=0.5, user-scalable=no">
+    <title>DreamTool</title>
+    <link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/mdui/1.0.2/css/mdui.min.css">
+    
+</head>
+
+<body class="mdui-theme-layout-dark mdui-theme-primary-blue mdui-theme-accent-blue">
+    <div class="mdui-toolbar">
+
+        <span class="mdui-typo-title">Dream WEB Tool</span>
+        <div class="mdui-toolbar-spacer">HMAC hmacsha512编码工具</div>
+    </div>
+    <div class="mdui-container">
+
+        <div class="mdui-card mdui-m-t-1 mdui-p-t-1">
+            <!-- 卡片的标题和副标题 -->
+            <div class="mdui-card-primary">
+                <div class="mdui-card-primary-title">输入区</div>
+                <div class="mdui-card-primary-subtitle">input area</div>
+            </div>
+
+            <!-- 卡片的内容 -->
+            <div class="mdui-card-content">
+
+                <div class="mdui-textfield">
+                    <textarea class="mdui-textfield-input" id="hmacsha512_input" placeholder="需要编码的内容"></textarea>
+                </div>
+                <div class="mdui-textfield mdui-textfield-floating-label mdui-m-t-2">
+                    <label class="mdui-textfield-label">密钥(Key)</label>
+                    <input class="mdui-textfield-input" id="hmacsha512Key" type="text" />
+                </div>
+            </div>
+
+            <!-- 卡片的按钮 -->
+            <div class="mdui-card-actions">
+                <button class="mdui-btn mdui-ripple" id="encodeButton" onclick="hmacsha512_encode()">编码</button>
+               <!--  <button class="mdui-btn mdui-ripple" id="decodeButton" onclick="hmacsha512_decode()">解码</button> --> 
+            </div>
+
+        </div>
+
+
+        <div class="mdui-card mdui-m-t-1 mdui-p-t-1">
+            <!-- 卡片的标题和副标题 -->
+            <div class="mdui-card-primary">
+                <div class="mdui-card-primary-title">显示区</div>
+                <div class="mdui-card-primary-subtitle">output area</div>
+            </div>
+
+            <!-- 卡片的内容 -->
+            <div class="mdui-card-content">
+
+                <div class="mdui-textfield">
+                    <textarea class="mdui-textfield-input" id="hmacsha512_output" placeholder="计算后输出"></textarea>
+                </div>
+            </div>
+            <!-- 卡片的按钮 -->
+            <div class="mdui-card-actions">
+            </div>
+        </div>
+    </div>
+</body>
+
+<!-- MDUI -->
+<script src="https://cdnjs.loli.net/ajax/libs/mdui/1.0.2/js/mdui.min.js"></script>
+<!-- jQuery -->
+<script src="https://cdnjs.loli.net/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<!-- CryptoJS -->
+<script src="https://cdnjs.loli.net/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+<script src="../../js/tooljs/hmac/tool-hmacsha512.js"></script>
+
+</html>
