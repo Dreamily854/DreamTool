@@ -13,8 +13,8 @@ A tool station
 - AES加解密工具(基本功能完成)
 - Tripledes 加解密工具 (基本功能完成)
 - rc4 加解密工具 (基本功能完成)
-- rabbit 加解密工具 (未开始)
-- rabbit-legacy 加解密工具 (未开始)
+- rabbit 加解密工具 (基本功能完成)
+- rabbit-legacy 加解密工具 (基本功能完成)
 - evpkdf 加解密工具 (未开始)
 #### CryptoJS 哈希算法
 - MD5编码工具(基本功能完成)
