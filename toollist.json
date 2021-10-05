@@ -47,7 +47,7 @@
             ]
         },
         {
-            "name": "CryptoJS哈希算法",
+            "name": "CryptoJS Hash",
             "items": [
                 {
                     "name": "md5编码工具",
@@ -84,7 +84,7 @@
             ]
         },
         {
-            "name": "CryptoJS Hmac算法",
+            "name": "CryptoJS Hmac",
             "items": [
                 {
                     "name": "hmacmd5编码工具",
