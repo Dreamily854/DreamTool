@@ -119,6 +119,15 @@
                     "url": "./tool/hmac/hmacripemd160.html"
                 }
             ]
+        },
+        {
+            "name": "实用工具",
+            "items": [
+                {
+                    "name": "密码生成工具",
+                    "url": "./tool/passwordgenerate.html"
+                } 
+            ]
         }
     ]
 }
