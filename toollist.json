@@ -1,7 +1,7 @@
 {
     "groups": [
         {
-            "name": "CryptoJS编码/解码",
+            "name": "CryptoJS",
             "items": [
                 {
                     "name": "base64编解码工具",
@@ -14,12 +14,7 @@
                 {
                     "name": "latin1编解码工具",
                     "url": "./tool/en_decode/latin1.html"
-                }
-            ]
-        },
-        {
-            "name": "CryptoJS加密/解密",
-            "items": [
+                },
                 {
                     "name": "AES加解密工具",
                     "url": "./tool/en_decrypt/aes.html"
@@ -41,9 +36,15 @@
                     "url": "./tool/en_decrypt/rabbit-legacy.html"
                 },
                 {
-                    "name": "evpkdf加解密工具",
-                    "url": "./tool/en_decrypt/evpkdf.html"
+                    "name": "CryptoJS Hash/HMAC 编码工具",
+                    "url": "./tool/hash/md5.html"
                 }
+            ]
+        },
+        {
+            "name": "CryptoJS加密/解密",
+            "items": [
+                
             ]
         },
         {

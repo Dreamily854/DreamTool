@@ -7,14 +7,14 @@
         content="width=device-width,initial-scale=1, maximum-scale=1, minimum-scale=0.5, user-scalable=no">
     <title>DreamTool</title>
     <link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/mdui/1.0.2/css/mdui.min.css">
-    
+    <link rel="import" href="../footer.html" id="footer" />
 </head>
 
 <body class="mdui-theme-layout-dark mdui-theme-primary-blue mdui-theme-accent-blue mdui-bottom-nav-fixed">
     <div class="mdui-toolbar">
 
         <span class="mdui-typo-title">Dream WEB Tool</span>
-        <div class="mdui-toolbar-spacer">HMAC hmacsha3编码工具</div>
+        <div class="mdui-toolbar-spacer">CryptoJS HASH/HMAC编码工具</div>
         <a href="https://github.com/Dreamily854/DreamTool" target="_blank"
             class="mdui-btn mdui-btn-icon mdui-ripple mdui-ripple-white" mdui-tooltip="{content: '查看 Github'}">
             <img class="mdui-icon material-icons" src="/github.svg" style="width: 24px;height:24px;">
@@ -33,18 +33,36 @@
             <div class="mdui-card-content">
 
                 <div class="mdui-textfield">
-                    <textarea class="mdui-textfield-input" id="hmacsha3_input" placeholder="需要编码的内容"></textarea>
+                    <textarea class="mdui-textfield-input" id="input" placeholder="需要编码的内容"></textarea>
                 </div>
                 <div class="mdui-textfield mdui-textfield-floating-label mdui-m-t-2">
-                    <label class="mdui-textfield-label">密钥(Key)</label>
-                    <input class="mdui-textfield-input" id="hmacsha3Key" type="text" />
+                    <label class="mdui-textfield-label">密钥(Key) (HMAC需要)</label>
+                    <input class="mdui-textfield-input" id="Key" type="text" />
                 </div>
             </div>
 
             <!-- 卡片的按钮 -->
             <div class="mdui-card-actions">
-                <button class="mdui-btn mdui-ripple" id="encodeButton" onclick="hmacsha3_encode()">编码</button>
-               <!--  <button class="mdui-btn mdui-ripple" id="decodeButton" onclick="hmacsha3_decode()">解码</button> --> 
+                <button class="mdui-btn mdui-ripple" onclick="dtencode('hashmd5')">Hash MD5</button>
+                <button class="mdui-btn mdui-ripple" onclick="dtencode('hashsha1')">Hash SHA-1</button>
+                <button class="mdui-btn mdui-ripple" onclick="dtencode('hashsha3')">Hash SHA-3</button>
+                <button class="mdui-btn mdui-ripple" onclick="dtencode('hashsha224')">Hash SHA-224</button>
+                <button class="mdui-btn mdui-ripple" onclick="dtencode('hashsha256')">Hash SHA256</button>
+                <button class="mdui-btn mdui-ripple" onclick="dtencode('hashsha384')">Hash SHA384</button>
+                <button class="mdui-btn mdui-ripple" onclick="dtencode('hashsha512')">Hash SHA512</button>
+                <button class="mdui-btn mdui-ripple" onclick="dtencode('hashripemd160')">Hash RIPEMD160</button>
+                
+                <button class="mdui-btn mdui-ripple" onclick="dtencode('hmacmd5')">HMAC MD5</button>
+                <button class="mdui-btn mdui-ripple" onclick="dtencode('hmacsha1')">HMAC SHA-1</button>
+                <button class="mdui-btn mdui-ripple" onclick="dtencode('hmacsha3')">HMAC SHA-3</button>
+                <button class="mdui-btn mdui-ripple" onclick="dtencode('hmacsha224')">HMAC SHA-224</button>
+                <button class="mdui-btn mdui-ripple" onclick="dtencode('hmacsha256')">HMAC SHA256</button>
+                <button class="mdui-btn mdui-ripple" onclick="dtencode('hmacsha384')">HMAC SHA384</button>
+                <button class="mdui-btn mdui-ripple" onclick="dtencode('hmacsha512')">HMAC SHA512</button>
+                <button class="mdui-btn mdui-ripple" onclick="dtencode('hmacripemd160')">HMAC RIPEMD160</button>
+                
+               
+               <!--  <button class="mdui-btn mdui-ripple" id="decodeButton" onclick="hmacmd5_decode()">解码</button> --> 
             </div>
 
         </div>
@@ -61,7 +79,7 @@
             <div class="mdui-card-content">
 
                 <div class="mdui-textfield">
-                    <textarea class="mdui-textfield-input" id="hmacsha3_output" placeholder="计算后输出"></textarea>
+                    <textarea class="mdui-textfield-input" id="output" placeholder="计算后输出"></textarea>
                 </div>
             </div>
             <!-- 卡片的按钮 -->
@@ -80,7 +98,7 @@
 <script src="https://cdnjs.loli.net/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <!-- CryptoJS -->
 <script src="https://cdnjs.loli.net/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
-<script src="../../js/tooljs/hmac/tool-hmacsha3.js"></script>
+<script src="../../js/tooljs/tool-hash_hmac.js"></script>
 
 <script src="/js/footer.js"></script>
 
