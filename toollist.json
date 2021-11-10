@@ -47,6 +47,10 @@
                 {
                     "name": "密码生成工具",
                     "url": "./tool/passwordgenerate.html"
+                }, 
+                {
+                    "name": "文件校验工具",
+                    "url": "./tool/fileCheck.html"
                 } 
             ]
         }
