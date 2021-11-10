@@ -1,5 +1,5 @@
-var inst = new mdui.Dialog("#procress",{
-    modal:true,
+var inst = new mdui.Dialog("#procress", {
+    modal: true,
 });
 
 
@@ -26,13 +26,10 @@ function changeBar(procress) {
 }
 
 
-filecheckd.ondragover = function (e) {
-    e.preventDefault();
-}
-filecheckd.ondrop = function (e) {
+
+function checkMd5(e) {
     inst.open()
-    e.preventDefault()
-    const file = e.dataTransfer.files[0];
+    const file = e
     console.log(file)
     //const sliceLength = 10;
     //const chunkSize = Math.ceil(file.size / sliceLength);
@@ -58,10 +55,34 @@ filecheckd.ondrop = function (e) {
             filesize = formatFileSize(file.size)
             filename = file.name
             inst.close()
-            
+
             changeBar(0)
             md5a = md5.end();
             mdui.alert("文件名: " + filename + "<br>" + "大小: " + filesize + "<br>" + "MD5: " + md5a, "MD5")
         }
     };
+}
+
+filecheckd.ondragover = function (e) {
+    e.preventDefault();
+}
+filecheckd.ondrop = function (e) {
+
+    e.preventDefault()
+    checkMd5(e.dataTransfer.files[0])
+
 };
+
+$("#fileUpdate-input").change(function () { 
+    file = $("#fileUpdate-input")[0].files[0]
+    console.log($("#fileUpdate-input")[0].files[0]); 
+    checkMd5(file)
+});
+
+
+
+filecheckd.onclick = function () {
+    console.log("click")
+    var fileUpdate_input = document.getElementById("fileUpdate-input");
+    fileUpdate_input.click();
+}

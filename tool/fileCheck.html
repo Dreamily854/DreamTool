@@ -45,20 +45,22 @@
             <!-- 卡片的内容 -->
             <div class="mdui-card-content">
 
-
                 <div class="mdui-textfield mdui-textfield-floating-label mdui-m-t-2">
                     <div class="main_check" id="filecheckd">
-                        <div class="mdui-typo-display-1-opacity d-center ">拖拽文件至此...</div>
+                        <div class="mdui-typo-display-1-opacity d-center ">拖拽文件至此或点击选择文件...</div>
                     </div>
                 </div>
             </div>
-
             <!-- 卡片的按钮 -->
 
 
 
 
         </div>
+
+        <form action="" id="fileUpdate-form">
+            <input type="file" name="filename" id="fileUpdate-input" style="display: none" />
+        </form>
 
         <div class="mdui-dialog" id="procress">
             <div class="mdui-dialog-title">计算进度</div>
